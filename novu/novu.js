@@ -1,15 +1,18 @@
-
 import { Novu } from '@novu/node';
 
-const novu = new Novu('<API_KEY>');
+export const sendDigest = async (name) => {
+    const novu = new Novu(process.env.YOUR_NOVU_API_KEY_HERE);
 
-export const sendingDigest = async () => {
+    await novu.subscribers.identify('digestSub', {
+        firstName: "digest subscriber",
+    });
+
     await novu.trigger('digest-showcase', {
         to: {
-            subscriberId: '<REPLACE_WITH_DATA>'
+            subscriberId: 'digestSub'
         },
         payload: {
-            name: '<REPLACE_WITH_DATA>'
+            name: name
         }
     });
 }
