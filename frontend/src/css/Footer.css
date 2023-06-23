@@ -1,5 +1,5 @@
-/* .footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+.footer{
+margin-bottom: -2rem ;
+align-self: flex-start;
+margin-left: 2rem;
+}

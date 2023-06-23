@@ -16,8 +16,9 @@ const Body = () => {
     return (
 
         <form onSubmit={onSubmitHandler} className="form">
-            <input placeholder="Enter notification text" type="text" onChange={onChangeHandler} value={name} className="text"/>
-            <button className="btn"> Send </button>
+            <label for="noti-text" className="label">Enter notification text:</label>
+            <input id="noti-text" placeholder="Will be sent as a digest message" type="text" onChange={onChangeHandler} value={name} className="text"/>
+            <button className="btn" type="submit"> Send </button>
         </form>
     )
 }
