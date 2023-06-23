@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "../css/Body.css"
 
 const Body = () => {
     const [name, setName] = useState('')
@@ -14,9 +15,9 @@ const Body = () => {
     }
     return (
 
-        <form onSubmit={onSubmitHandler}>
-            <input placeholder="Enter notification text" type="text" onChange={onChangeHandler} value={name} />
-            <button > Send </button>
+        <form onSubmit={onSubmitHandler} className="form">
+            <input placeholder="Enter notification text" type="text" onChange={onChangeHandler} value={name} className="text"/>
+            <button className="btn"> Send </button>
         </form>
     )
 }
