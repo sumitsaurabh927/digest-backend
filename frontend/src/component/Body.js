@@ -7,7 +7,7 @@ const Body = () => {
 
     const onSubmitHandler = async(e) => {
         e.preventDefault();
-        const res = await axios.post('http://localhost:3000/api/v1/sending-digest',{name})
+        const res = await axios.post('https://backend-for-digest.onrender.com/api/v1/sending-digest',{name})
         setName('');
     }
     const onChangeHandler = e => {
