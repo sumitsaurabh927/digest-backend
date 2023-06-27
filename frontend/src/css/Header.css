@@ -1,9 +1,10 @@
 .bell {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin: -3rem 2rem;
-    position: relative;
+    justify-content: space-between;
+    max-width: 30rem;
 }
 
 .bellImg {
@@ -12,18 +13,23 @@
     position: relative;
     left: -0.8rem;
 }
-.intro{
-    margin-right: 14rem;
+
+.intro {
+    flex: 0.8;
 }
-.title{
+
+.title {
     font-size: 3rem;
 }
-.desc{
+
+.desc {
     padding: 2rem 0;
 }
 
-.center{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+.center {
+    flex: 0.2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1rem 1.5rem 0 0;
 }
